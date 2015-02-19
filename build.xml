@@ -1,0 +1,58 @@
+<?xml version="1.0" ?>
+<project name="Algorithms" default="compile" basedir=".">
+    <target name="init">
+        <mkdir dir="build/classes" />
+        <mkdir dir="dist" />
+    </target>
+
+    <target name="compile" depends="init">
+        <javac srcdir="src" 
+                destdir="build/classes" />
+    </target>
+
+    <target name="doc" depends="init">
+        <javadoc destdir="build/classes"
+                 sourcepath="src"
+                 packagenames="com.*" />
+    </target>
+
+    <target name="run_000" depends="compile" >
+        <java classname="com.xoozi.alg.search.BinarySearch" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+
+            <arg value="${basedir}/test/tingw" />
+            <arg value="33" />
+        </java>
+    </target>
+
+    <target name="run_001" depends="compile" >
+        <java classname="com.xoozi.alg.Stack" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_002" depends="compile" >
+        <java classname="com.xoozi.alg.Queue" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_003" depends="compile" >
+        <java classname="com.xoozi.alg.Bag" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="package" depends="compile,doc">
+        <jar destfile="dist/project.jar"
+             basedir="build/classes" />
+    </target>
+</project>

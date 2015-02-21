@@ -75,6 +75,22 @@
         </java>
     </target>
 
+    <target name="run_007" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Selection" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+    
+    <target name="run_008" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Insertion" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
     <target name="package" depends="compile,doc">
         <jar destfile="dist/project.jar"
              basedir="build/classes" />

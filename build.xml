@@ -91,6 +91,62 @@
         </java>
     </target>
 
+    <target name="run_009" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Shell" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_010" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Merge" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_010_1" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Merge" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_011" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Quick" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_012" depends="compile" >
+        <java classname="com.xoozi.alg.sort.Quick3Way" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_013" depends="compile" >
+        <java classname="com.xoozi.alg.sort.MaxPQ" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
+    <target name="run_014" depends="compile" >
+        <java classname="com.xoozi.alg.sort.MinPQ" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
     <target name="package" depends="compile,doc">
         <jar destfile="dist/project.jar"
              basedir="build/classes" />

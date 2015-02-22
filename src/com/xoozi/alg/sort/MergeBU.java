@@ -63,7 +63,7 @@ public class MergeBU{
     }
 
     protected static void show(Object[] a){
-        for(int i = 0; i < a.length - 1; i++)
+        for(int i = 0; i < a.length; i++)
             StdOut.println(a[i]);
     }
 

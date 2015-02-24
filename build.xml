@@ -171,6 +171,14 @@
         </java>
     </target>
 
+    <target name="run_018" depends="compile" >
+        <java classname="com.xoozi.alg.search.BinarySearchST" >
+            <classpath>
+                <pathelement path="${basedir}/build/classes"/>
+            </classpath>
+        </java>
+    </target>
+
     <target name="package" depends="compile,doc">
         <jar destfile="dist/project.jar"
              basedir="build/classes" />
